@@ -18,7 +18,6 @@ import {
   Music, 
   Cpu, 
   FileJson,
-  Zap,
   Download
 } from 'lucide-react';
 import InfoSections from './InfoSections';
@@ -49,7 +48,7 @@ function Header({ theme, onToggleTheme }) {
       <div className="header-inner">
         <div className="logo">
           <div className="logo-icon-wrapper">
-            <Zap size={24} className="logo-icon-svg" />
+            <img src="/logo.png" alt="PixelPack" style={{ width: '24px', height: '24px', borderRadius: '4px' }} />
           </div>
           <span className="logo-text">PixelPack</span>
         </div>

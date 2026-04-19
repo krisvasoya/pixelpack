@@ -1,22 +1,22 @@
 /* ─── Variables ─────────────────────────────────────────── */
 :root {
-  --accent-glow: rgba(0, 229, 255, 0.4);
-  --bg: #070b16;
-  --bg2: #0a0e1a;
-  --bg3: #12172b;
-  --surface: rgba(18, 23, 43, 0.6);
-  --surface2: rgba(30, 41, 59, 0.8);
-  --accent: #00e5ff;
-  --accent2: #7c3aed;
-  --text: #f8fafc;
-  --text2: #94a3b8;
-  --text3: #64748b;
-  --border: rgba(255, 255, 255, 0.08);
-  --radius: 12px;
-  --radius-lg: 20px;
-  --font-sans: 'Outfit', -apple-system, sans-serif;
-  --font-mono: 'Space Grotesk', monospace;
-  --danger: #f43f5e;
+  --accent-glow: rgba(18, 78, 102, 0.4);
+  --bg: #212A31;
+  --bg2: #2E3944;
+  --bg3: #354F52;
+  --surface: rgba(46, 57, 68, 0.5);
+  --surface2: rgba(53, 79, 82, 0.7);
+  --accent: #124E66;
+  --accent2: #748D92;
+  --text: #D3D9D4;
+  --text2: #84A98C;
+  --text3: #52796F;
+  --border: rgba(211, 217, 212, 0.1);
+  --radius: 8px;
+  --radius-lg: 14px;
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --danger: #ef4444;
 }
 
 [data-theme="light"] {
@@ -117,13 +117,13 @@ body {
 
 .logo-icon-wrapper {
   background: linear-gradient(135deg, var(--accent), var(--accent2));
-  padding: 8px;
-  border-radius: 10px;
+  padding: 6px;
+  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #000;
-  box-shadow: 0 0 20px rgba(0, 229, 255, 0.3);
+  color: white;
+  box-shadow: 0 4px 12px rgba(18, 78, 102, 0.4);
 }
 
 .logo-icon-svg {
@@ -131,7 +131,7 @@ body {
 }
 
 .logo-text {
-  background: linear-gradient(to right, #fff, #cbd5e1);
+  background: linear-gradient(to right, var(--text), var(--text2));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -185,9 +185,9 @@ body {
   font-weight: 600;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: var(--accent);
-  background: rgba(0, 229, 255, 0.08);
-  border: 1px solid rgba(0, 229, 255, 0.2);
+  color: var(--text);
+  background: rgba(18, 78, 102, 0.2);
+  border: 1px solid rgba(18, 78, 102, 0.4);
   border-radius: 100px;
   padding: 6px 16px;
   margin-bottom: 24px;
@@ -251,7 +251,7 @@ body {
   align-items: center;
   gap: 10px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 15px var(--accent-glow);
+  box-shadow: 0 4px 15px rgba(18, 78, 102, 0.3);
 }
 
 .btn-primary.cancel-btn {
@@ -302,7 +302,7 @@ body {
 .url-input-wrap:focus-within {
   border-color: var(--accent);
   background: var(--bg3);
-  box-shadow: 0 0 0 1px var(--accent), 0 0 20px rgba(0, 229, 255, 0.15);
+  box-shadow: 0 0 0 1px var(--accent), 0 0 20px rgba(99, 102, 241, 0.15);
 }
 
 .url-input-wrap.error {
@@ -415,7 +415,7 @@ body {
   border-color: var(--accent);
   color: var(--accent);
   transform: translateY(-1px);
-  box-shadow: 0 5px 15px rgba(0, 229, 255, 0.1);
+  box-shadow: 0 5px 15px rgba(99, 102, 241, 0.1);
 }
 
 .card-hint {
@@ -474,7 +474,7 @@ body {
 
 .depth-btn.active,
 .depth-btn:hover {
-  background: rgba(0, 229, 255, 0.1);
+  background: rgba(99, 102, 241, 0.1);
   border-color: var(--accent);
   color: var(--accent);
 }
@@ -685,8 +685,8 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  background: linear-gradient(135deg, rgba(0, 229, 255, 0.1), rgba(124, 58, 237, 0.1));
-  border-color: rgba(0, 229, 255, 0.3);
+  background: linear-gradient(135deg, rgba(18, 78, 102, 0.1), rgba(82, 121, 111, 0.1));
+  border-color: rgba(18, 78, 102, 0.3);
 }
 
 .download-info {
