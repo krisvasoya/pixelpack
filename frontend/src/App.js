@@ -24,7 +24,7 @@ import InfoSections from './InfoSections';
 import { gsap } from 'gsap';
 import './App.css';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || '';
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:3001';
 
 // ─── Utility Hooks ─────────────────────────────────────────────────────────
 
@@ -452,7 +452,7 @@ export default function App() {
       } else if (err.code === 'ECONNABORTED' || err.message?.includes('timeout')) {
         msg = 'Processing is taking too long. Try reducing the crawl depth.';
       } else if (err.message?.includes('Network Error') || err.message?.includes('ECONNREFUSED')) {
-        msg = 'Cannot reach the backend server. Make sure it is running on port 3001.';
+        msg = 'Cannot reach the backend server. Please try again later.';
       }
       setErrorMsg(msg);
       addLog({ type: 'error', message: `❌ Error: ${msg}` });
