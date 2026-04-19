@@ -38,6 +38,11 @@ app.use('/api/crawl', limiter);
 // Routes
 app.use('/api', crawlRouter);
 
+// Explicit test route
+app.get('/api/test', (req, res) => {
+  res.json({ message: "Backend working 🚀", timestamp: new Date().toISOString() });
+});
+
 // Health check
 app.get('/health', (req, res) => {
   res.json({ status: 'ok', version: '1.0.0', service: 'PixelPack Backend' });
