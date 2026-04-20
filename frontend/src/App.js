@@ -24,7 +24,7 @@ import InfoSections from './InfoSections';
 import { gsap } from 'gsap';
 import './App.css';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:3001';
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || (process.env.NODE_ENV === 'production' ? '/_/backend' : 'http://localhost:3001');
 
 // ─── Utility Hooks ─────────────────────────────────────────────────────────
 

@@ -36,17 +36,25 @@ const limiter = rateLimit({
 app.use('/api/crawl', limiter);
 
 // Routes
-app.use('/api', crawlRouter);
+const apiPrefix = process.env.BACKEND_BASE_PATH || '';
 
-// Explicit test route
-app.get('/api/test', (req, res) => {
+// If apiPrefix is set (e.g. /_/backend), we also want to match routes without it for local dev
+const router = express.Router();
+
+router.use('/api', crawlRouter);
+
+router.get('/api/test', (req, res) => {
   res.json({ message: "Backend working 🚀", timestamp: new Date().toISOString() });
 });
 
-// Health check
-app.get('/health', (req, res) => {
+router.get('/health', (req, res) => {
   res.json({ status: 'ok', version: '1.0.0', service: 'PixelPack Backend' });
 });
+
+app.use(apiPrefix, router);
+if (apiPrefix) {
+  app.use('/', router); // Also support root for local dev
+}
 
 // 404 handler
 app.use((req, res) => {
